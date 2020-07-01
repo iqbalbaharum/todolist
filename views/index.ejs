@@ -33,6 +33,7 @@
             <div class="card-body">
               <h5 class="card-title"><%= todos[x].title %></h5>
               <p class="card-text"><%= todos[x].description %></p>
+              <p class="card-footer"><%= moment(todos[x].created_at).fromNow() %></p>
               <a href="/todo/<%= todos[x]._id %>" class="card-link">Update</a>
               <a href="/todo/delete/<%= todos[x]._id %>" class="card-link">Delete</a>
             </div>

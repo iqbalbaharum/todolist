@@ -1,5 +1,6 @@
 
 var TodoModel = require('../models/todo')
+var moment = require('moment')
 
 exports.getAll = function(request, response) {
   TodoModel.find({}, function(err, todos) { // Model
@@ -7,7 +8,8 @@ exports.getAll = function(request, response) {
     if (err) return console.log(err);
     
     response.render('index', {
-        todos: todos
+        todos: todos,
+        moment: moment
     })
   })
 }

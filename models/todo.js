@@ -9,6 +9,10 @@ var TodoSchema = new Schema({
     description: { 
         type: String,
         default: 'this is a default value'
+    },
+    created_at: {
+        type: Date,
+        default: Date.now()
     }
 })
 
